@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 93%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 93%;
+
+    --primary: 0 98% 27%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 50% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 281 61% 12%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 27%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 98% 27%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-obsidian text-foreground antialiased;
+    background-image: radial-gradient(circle at 10% 20%, rgba(13, 13, 13, 0.5) 0%, rgba(6, 6, 6, 0.9) 90%);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+  
+  p, span, a, button, input {
+    @apply font-gothic;
+  }
+}
+
+@layer components {
+  .gothic-card {
+    @apply bg-obsidian-light border border-obsidian-dark rounded-md shadow-lg transition-all duration-300 hover:shadow-blood-dark/20;
+  }
+  
+  .blood-btn {
+    @apply bg-blood hover:bg-blood-light text-white font-medium py-2 px-4 rounded-sm transition-all;
+  }
+  
+  .obsidian-btn {
+    @apply bg-obsidian hover:bg-obsidian-light text-white border border-blood-dark font-medium py-2 px-4 rounded-sm transition-all;
+  }
+  
+  .gothic-link {
+    @apply text-silver hover:text-blood transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blood-light after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .product-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+
+  .gothic-divider {
+    @apply flex items-center text-muted-foreground my-6;
+  }
+  
+  .gothic-divider::before,
+  .gothic-divider::after {
+    @apply content-[""] flex-1 border-t border-blood/30;
+  }
+  
+  .gothic-divider::before {
+    @apply mr-4;
+  }
+  
+  .gothic-divider::after {
+    @apply ml-4;
+  }
+}
