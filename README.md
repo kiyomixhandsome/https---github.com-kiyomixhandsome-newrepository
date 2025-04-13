@@ -1,8 +1,8 @@
-# Welcome to your Lovable project
+# Welcome to your  project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/f7276350-38fb-45bc-9664-afd2dd795938
+**URL**: https://humble-yodel-r4wx4jr4wjxp3p5gw.github.dev/
 
 ## How can I edit this code?
 
@@ -59,15 +59,3 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f7276350-38fb-45bc-9664-afd2dd795938) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
